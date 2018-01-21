@@ -17,66 +17,103 @@ public class menuTextiles extends javax.swing.JFrame {
     private void initComponents() {
 
         jLabel2 = new javax.swing.JLabel();
-        jTabbedPane1 = new javax.swing.JTabbedPane();
-        jPanel1 = new javax.swing.JPanel();
-        jPanel2 = new javax.swing.JPanel();
-        jPanel3 = new javax.swing.JPanel();
-        jPanel4 = new javax.swing.JPanel();
-        jPanel5 = new javax.swing.JPanel();
+        pedidos = new javax.swing.JButton();
+        bordado = new javax.swing.JButton();
+        factHilo = new javax.swing.JButton();
+        pagosT = new javax.swing.JButton();
+        cuenta = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
-        jMenuBar1 = new javax.swing.JMenuBar();
-        jMenu1 = new javax.swing.JMenu();
-        jMenu2 = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel2.setFont(new java.awt.Font("Oriya MN", 1, 50)); // NOI18N
         jLabel2.setText("Textiles Jimenez");
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 40, -1, -1));
 
-        jTabbedPane1.setFont(new java.awt.Font("Oriya MN", 0, 16)); // NOI18N
+        pedidos.setBackground(new java.awt.Color(0, 0, 0));
+        pedidos.setFont(new java.awt.Font("Oriya MN", 0, 16)); // NOI18N
+        pedidos.setForeground(new java.awt.Color(255, 255, 255));
+        pedidos.setText("Pedidos");
+        pedidos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                pedidosActionPerformed(evt);
+            }
+        });
+        getContentPane().add(pedidos, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 190, 160, 60));
 
-        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        jTabbedPane1.addTab("Pedidos", jPanel1);
+        bordado.setBackground(new java.awt.Color(0, 0, 0));
+        bordado.setFont(new java.awt.Font("Oriya MN", 0, 16)); // NOI18N
+        bordado.setForeground(new java.awt.Color(255, 255, 255));
+        bordado.setText("Bordado");
+        bordado.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bordadoActionPerformed(evt);
+            }
+        });
+        getContentPane().add(bordado, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 190, 160, 60));
 
-        jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        jTabbedPane1.addTab("Bordados", jPanel2);
+        factHilo.setBackground(new java.awt.Color(0, 0, 0));
+        factHilo.setFont(new java.awt.Font("Oriya MN", 0, 16)); // NOI18N
+        factHilo.setForeground(new java.awt.Color(255, 255, 255));
+        factHilo.setText("Fact. Hilo");
+        factHilo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                factHiloActionPerformed(evt);
+            }
+        });
+        getContentPane().add(factHilo, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 300, 160, 60));
 
-        jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        jTabbedPane1.addTab("Fact. Hilo", jPanel3);
+        pagosT.setBackground(new java.awt.Color(0, 0, 0));
+        pagosT.setFont(new java.awt.Font("Oriya MN", 0, 16)); // NOI18N
+        pagosT.setForeground(new java.awt.Color(255, 255, 255));
+        pagosT.setText("Pago trabajadores");
+        pagosT.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                pagosTActionPerformed(evt);
+            }
+        });
+        getContentPane().add(pagosT, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 300, 200, 60));
 
-        jPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        jTabbedPane1.addTab("Pago trabajadores", jPanel4);
-
-        javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
-        jPanel5.setLayout(jPanel5Layout);
-        jPanel5Layout.setHorizontalGroup(
-            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 669, Short.MAX_VALUE)
-        );
-        jPanel5Layout.setVerticalGroup(
-            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 324, Short.MAX_VALUE)
-        );
-
-        jTabbedPane1.addTab("Cuenta", jPanel5);
-
-        getContentPane().add(jTabbedPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 210, 690, 370));
+        cuenta.setBackground(new java.awt.Color(0, 0, 0));
+        cuenta.setFont(new java.awt.Font("Oriya MN", 0, 16)); // NOI18N
+        cuenta.setForeground(new java.awt.Color(255, 255, 255));
+        cuenta.setText("Cuenta");
+        cuenta.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cuentaActionPerformed(evt);
+            }
+        });
+        getContentPane().add(cuenta, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 420, 160, 60));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesSistema/fondo.jpg"))); // NOI18N
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1130, 700));
-
-        jMenu1.setText("Menú");
-        jMenuBar1.add(jMenu1);
-
-        jMenu2.setText("Edit");
-        jMenuBar1.add(jMenu2);
-
-        setJMenuBar(jMenuBar1);
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1010, 590));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void pedidosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pedidosActionPerformed
+        pedidos pedidos1 = new pedidos();
+        pedidos1.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_pedidosActionPerformed
+
+    private void bordadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bordadoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_bordadoActionPerformed
+
+    private void factHiloActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_factHiloActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_factHiloActionPerformed
+
+    private void pagosTActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pagosTActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_pagosTActionPerformed
+
+    private void cuentaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cuentaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cuentaActionPerformed
 
     /**
      * @param args the command line arguments
@@ -114,16 +151,12 @@ public class menuTextiles extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton bordado;
+    private javax.swing.JButton cuenta;
+    private javax.swing.JButton factHilo;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JMenu jMenu1;
-    private javax.swing.JMenu jMenu2;
-    private javax.swing.JMenuBar jMenuBar1;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel3;
-    private javax.swing.JPanel jPanel4;
-    private javax.swing.JPanel jPanel5;
-    private javax.swing.JTabbedPane jTabbedPane1;
+    private javax.swing.JButton pagosT;
+    private javax.swing.JButton pedidos;
     // End of variables declaration//GEN-END:variables
 }
