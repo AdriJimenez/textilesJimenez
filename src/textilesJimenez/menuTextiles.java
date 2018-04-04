@@ -24,11 +24,13 @@ public class menuTextiles extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         btnModficarPedidos = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
-        btnModificarTrabajadores = new javax.swing.JButton();
+        btnPagoTrabajadores = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
-        jButton3 = new javax.swing.JButton();
+        btnPrestamos = new javax.swing.JButton();
         jPanel4 = new javax.swing.JPanel();
-        jButton4 = new javax.swing.JButton();
+        btnMateriaPrima = new javax.swing.JButton();
+        jPanel5 = new javax.swing.JPanel();
+        btnCuenta = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
@@ -38,69 +40,96 @@ public class menuTextiles extends javax.swing.JFrame {
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel2.setFont(new java.awt.Font("Kohinoor Bangla", 1, 50)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Khmer MN", 1, 50)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Textiles Jiménez");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 30, -1, -1));
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 50, -1, 60));
 
         jTabbedPane1.setBackground(new java.awt.Color(255, 255, 255));
-        jTabbedPane1.setFont(new java.awt.Font("Khmer Sangam MN", 0, 15)); // NOI18N
+        jTabbedPane1.setFont(new java.awt.Font("Khmer MN", 0, 16)); // NOI18N
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         btnModficarPedidos.setBackground(new java.awt.Color(0, 0, 0));
-        btnModficarPedidos.setFont(new java.awt.Font("Khmer Sangam MN", 0, 16)); // NOI18N
+        btnModficarPedidos.setFont(new java.awt.Font("Khmer MN", 1, 16)); // NOI18N
         btnModficarPedidos.setForeground(new java.awt.Color(255, 255, 255));
         btnModficarPedidos.setText("Modificar");
+        btnModficarPedidos.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         btnModficarPedidos.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnModficarPedidosActionPerformed(evt);
             }
         });
-        jPanel1.add(btnModficarPedidos, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 60, 110, 40));
+        jPanel1.add(btnModficarPedidos, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 60, 110, 50));
 
         jTabbedPane1.addTab("Pedidos", jPanel1);
 
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        btnModificarTrabajadores.setBackground(new java.awt.Color(0, 0, 0));
-        btnModificarTrabajadores.setFont(new java.awt.Font("Khmer Sangam MN", 0, 16)); // NOI18N
-        btnModificarTrabajadores.setForeground(new java.awt.Color(255, 255, 255));
-        btnModificarTrabajadores.setText("Pagos");
-        btnModificarTrabajadores.addActionListener(new java.awt.event.ActionListener() {
+        btnPagoTrabajadores.setBackground(new java.awt.Color(0, 0, 0));
+        btnPagoTrabajadores.setFont(new java.awt.Font("Khmer MN", 1, 16)); // NOI18N
+        btnPagoTrabajadores.setForeground(new java.awt.Color(255, 255, 255));
+        btnPagoTrabajadores.setText("Pagos");
+        btnPagoTrabajadores.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnModificarTrabajadoresActionPerformed(evt);
+                btnPagoTrabajadoresActionPerformed(evt);
             }
         });
-        jPanel2.add(btnModificarTrabajadores, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 60, 110, 40));
+        jPanel2.add(btnPagoTrabajadores, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 60, 110, 50));
 
-        jTabbedPane1.addTab("Trabajadores", jPanel2);
+        jTabbedPane1.addTab("Pagos", jPanel2);
 
         jPanel3.setBackground(new java.awt.Color(255, 255, 255));
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jButton3.setBackground(new java.awt.Color(0, 0, 0));
-        jButton3.setFont(new java.awt.Font("Khmer Sangam MN", 0, 16)); // NOI18N
-        jButton3.setForeground(new java.awt.Color(255, 255, 255));
-        jButton3.setText("Modificar");
-        jPanel3.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 60, 110, 40));
+        btnPrestamos.setBackground(new java.awt.Color(0, 0, 0));
+        btnPrestamos.setFont(new java.awt.Font("Khmer MN", 1, 16)); // NOI18N
+        btnPrestamos.setForeground(new java.awt.Color(255, 255, 255));
+        btnPrestamos.setText("Modificar");
+        btnPrestamos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnPrestamosActionPerformed(evt);
+            }
+        });
+        jPanel3.add(btnPrestamos, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 60, 110, 50));
 
         jTabbedPane1.addTab("Préstamos", jPanel3);
 
         jPanel4.setBackground(new java.awt.Color(255, 255, 255));
         jPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jButton4.setBackground(new java.awt.Color(0, 0, 0));
-        jButton4.setFont(new java.awt.Font("Khmer Sangam MN", 0, 16)); // NOI18N
-        jButton4.setForeground(new java.awt.Color(255, 255, 255));
-        jButton4.setText("Modificar");
-        jPanel4.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 60, 110, 40));
+        btnMateriaPrima.setBackground(new java.awt.Color(0, 0, 0));
+        btnMateriaPrima.setFont(new java.awt.Font("Khmer MN", 1, 16)); // NOI18N
+        btnMateriaPrima.setForeground(new java.awt.Color(255, 255, 255));
+        btnMateriaPrima.setText("Modificar");
+        btnMateriaPrima.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnMateriaPrimaActionPerformed(evt);
+            }
+        });
+        jPanel4.add(btnMateriaPrima, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 60, 110, 50));
 
         jTabbedPane1.addTab("Materia prima", jPanel4);
 
-        getContentPane().add(jTabbedPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 150, 430, 220));
+        jPanel5.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel5.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        btnCuenta.setBackground(new java.awt.Color(0, 0, 0));
+        btnCuenta.setFont(new java.awt.Font("Khmer MN", 1, 16)); // NOI18N
+        btnCuenta.setForeground(new java.awt.Color(255, 255, 255));
+        btnCuenta.setText("Modificar");
+        btnCuenta.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCuentaActionPerformed(evt);
+            }
+        });
+        jPanel5.add(btnCuenta, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 60, 110, 50));
+
+        jTabbedPane1.addTab("Cuenta", jPanel5);
+
+        getContentPane().add(jTabbedPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 140, 470, 220));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesSistema/fondoMorado1.jpg"))); // NOI18N
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 680, 450));
@@ -109,9 +138,9 @@ public class menuTextiles extends javax.swing.JFrame {
         jMenuBar1.setSize(new java.awt.Dimension(86, 18));
 
         jMenu1.setText("Inicio");
-        jMenu1.setFont(new java.awt.Font("Khmer Sangam MN", 0, 14)); // NOI18N
+        jMenu1.setFont(new java.awt.Font("Kannada Sangam MN", 0, 14)); // NOI18N
 
-        menuSalir.setFont(new java.awt.Font("Khmer Sangam MN", 0, 14)); // NOI18N
+        menuSalir.setFont(new java.awt.Font("Kannada Sangam MN", 0, 14)); // NOI18N
         menuSalir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesSistema/btnSalir.png"))); // NOI18N
         menuSalir.setText("Salir");
         menuSalir.addActionListener(new java.awt.event.ActionListener() {
@@ -132,17 +161,35 @@ public class menuTextiles extends javax.swing.JFrame {
         System.exit(0);
     }//GEN-LAST:event_menuSalirActionPerformed
 
+    private void btnCuentaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCuentaActionPerformed
+        CuentaTotal cuenta = new CuentaTotal();
+        this.setVisible(false);
+        cuenta.setVisible(true);
+    }//GEN-LAST:event_btnCuentaActionPerformed
+
+    private void btnPrestamosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPrestamosActionPerformed
+        registroPrestamos prestamos = new registroPrestamos();
+        this.setVisible(false);
+        prestamos.setVisible(true);
+    }//GEN-LAST:event_btnPrestamosActionPerformed
+
+    private void btnPagoTrabajadoresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPagoTrabajadoresActionPerformed
+        pagoTrabajadores pagoTra = new pagoTrabajadores();
+        this.setVisible(false);
+        pagoTra.setVisible(true);
+    }//GEN-LAST:event_btnPagoTrabajadoresActionPerformed
+
     private void btnModficarPedidosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnModficarPedidosActionPerformed
         modificarPedidos modPedidos = new modificarPedidos();
         this.setVisible(false);
         modPedidos.setVisible(true);
     }//GEN-LAST:event_btnModficarPedidosActionPerformed
 
-    private void btnModificarTrabajadoresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnModificarTrabajadoresActionPerformed
-        pagoTrabajadores pagoTra = new pagoTrabajadores();
+    private void btnMateriaPrimaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMateriaPrimaActionPerformed
+        MateriaPrima materia = new MateriaPrima();
         this.setVisible(false);
-        pagoTra.setVisible(true);
-    }//GEN-LAST:event_btnModificarTrabajadoresActionPerformed
+        materia.setVisible(true);
+    }//GEN-LAST:event_btnMateriaPrimaActionPerformed
 
     /**
      * @param args the command line arguments
@@ -180,10 +227,11 @@ public class menuTextiles extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnCuenta;
+    private javax.swing.JButton btnMateriaPrima;
     private javax.swing.JButton btnModficarPedidos;
-    private javax.swing.JButton btnModificarTrabajadores;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
+    private javax.swing.JButton btnPagoTrabajadores;
+    private javax.swing.JButton btnPrestamos;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JMenu jMenu1;
@@ -192,6 +240,7 @@ public class menuTextiles extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
+    private javax.swing.JPanel jPanel5;
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JMenuItem menuSalir;
     // End of variables declaration//GEN-END:variables

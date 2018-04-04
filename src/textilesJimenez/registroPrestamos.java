@@ -1,11 +1,12 @@
 package textilesJimenez;
 
-public class pagoTrabajadores extends javax.swing.JFrame {
+/**
+ *
+ * @author adrianajimeneznava
+ */
+public class registroPrestamos extends javax.swing.JFrame {
 
-    /**
-     * Creates new form pagoTrabajadores
-     */
-    public pagoTrabajadores() {
+    public registroPrestamos() {
         initComponents();
         this.setLocationRelativeTo(null);
     }
@@ -19,9 +20,10 @@ public class pagoTrabajadores extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jMenu4 = new javax.swing.JMenu();
         jLabel2 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        tableTrabajadores = new javax.swing.JTable();
+        jTable1 = new javax.swing.JTable();
         jLabel1 = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
@@ -29,41 +31,44 @@ public class pagoTrabajadores extends javax.swing.JFrame {
         menuSalir = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
         menuPedidos = new javax.swing.JMenuItem();
-        jMenu5 = new javax.swing.JMenu();
-        menuPrestamos = new javax.swing.JMenuItem();
         jMenu3 = new javax.swing.JMenu();
+        menuPagos = new javax.swing.JMenuItem();
+        jMenu5 = new javax.swing.JMenu();
         menuMateriaPrima = new javax.swing.JMenuItem();
-        jMenu4 = new javax.swing.JMenu();
+        jMenu6 = new javax.swing.JMenu();
         menuCuenta = new javax.swing.JMenuItem();
 
+        jMenu4.setText("jMenu4");
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel2.setFont(new java.awt.Font("Khmer MN", 1, 50)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel2.setText("Pagos a trabajadores");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 40, -1, 50));
+        jLabel2.setText("Registro de préstamos");
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 30, -1, 70));
 
-        tableTrabajadores.setFont(new java.awt.Font("Khmer MN", 0, 16)); // NOI18N
-        tableTrabajadores.setModel(new javax.swing.table.DefaultTableModel(
+        jTable1.setFont(new java.awt.Font("Khmer MN", 0, 15)); // NOI18N
+        jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null}
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null}
             },
             new String [] {
-                "Nombre", "Fecha", "Total pago"
+                "Fecha", "Cantidad"
             }
         ));
-        jScrollPane1.setViewportView(tableTrabajadores);
+        jScrollPane1.setViewportView(jTable1);
 
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 140, 760, 320));
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 110, 710, 340));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesSistema/fondoMorado1.jpg"))); // NOI18N
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 910, 530));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 910, 510));
 
-        jMenu1.setText("Menú");
+        jMenu1.setText("Inicio");
         jMenu1.setFont(new java.awt.Font("Khmer MN", 1, 15)); // NOI18N
 
         menuPrincipal.setFont(new java.awt.Font("Khmer MN", 0, 14)); // NOI18N
@@ -103,23 +108,23 @@ public class pagoTrabajadores extends javax.swing.JFrame {
 
         jMenuBar1.add(jMenu2);
 
-        jMenu5.setText("Préstamos");
-        jMenu5.setFont(new java.awt.Font("Khmer MN", 1, 15)); // NOI18N
+        jMenu3.setText("Pagos");
+        jMenu3.setFont(new java.awt.Font("Khmer MN", 1, 15)); // NOI18N
 
-        menuPrestamos.setFont(new java.awt.Font("Khmer MN", 0, 14)); // NOI18N
-        menuPrestamos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesSistema/btnModificar.png"))); // NOI18N
-        menuPrestamos.setText("Modificar");
-        menuPrestamos.addActionListener(new java.awt.event.ActionListener() {
+        menuPagos.setFont(new java.awt.Font("Khmer MN", 0, 14)); // NOI18N
+        menuPagos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesSistema/btnModificar.png"))); // NOI18N
+        menuPagos.setText("Modificar");
+        menuPagos.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                menuPrestamosActionPerformed(evt);
+                menuPagosActionPerformed(evt);
             }
         });
-        jMenu5.add(menuPrestamos);
+        jMenu3.add(menuPagos);
 
-        jMenuBar1.add(jMenu5);
+        jMenuBar1.add(jMenu3);
 
-        jMenu3.setText("Materia prima");
-        jMenu3.setFont(new java.awt.Font("Khmer MN", 1, 15)); // NOI18N
+        jMenu5.setText("Materia prima");
+        jMenu5.setFont(new java.awt.Font("Khmer MN", 1, 15)); // NOI18N
 
         menuMateriaPrima.setFont(new java.awt.Font("Khmer MN", 0, 14)); // NOI18N
         menuMateriaPrima.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesSistema/btnModificar.png"))); // NOI18N
@@ -129,12 +134,12 @@ public class pagoTrabajadores extends javax.swing.JFrame {
                 menuMateriaPrimaActionPerformed(evt);
             }
         });
-        jMenu3.add(menuMateriaPrima);
+        jMenu5.add(menuMateriaPrima);
 
-        jMenuBar1.add(jMenu3);
+        jMenuBar1.add(jMenu5);
 
-        jMenu4.setText("Cuenta");
-        jMenu4.setFont(new java.awt.Font("Khmer MN", 1, 15)); // NOI18N
+        jMenu6.setText("Cuenta");
+        jMenu6.setFont(new java.awt.Font("Khmer MN", 1, 15)); // NOI18N
 
         menuCuenta.setFont(new java.awt.Font("Khmer MN", 0, 14)); // NOI18N
         menuCuenta.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesSistema/btnModificar.png"))); // NOI18N
@@ -144,9 +149,9 @@ public class pagoTrabajadores extends javax.swing.JFrame {
                 menuCuentaActionPerformed(evt);
             }
         });
-        jMenu4.add(menuCuenta);
+        jMenu6.add(menuCuenta);
 
-        jMenuBar1.add(jMenu4);
+        jMenuBar1.add(jMenu6);
 
         setJMenuBar(jMenuBar1);
 
@@ -154,20 +159,14 @@ public class pagoTrabajadores extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void menuPrincipalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuPrincipalActionPerformed
-        menuTextiles menuPrincipal = new menuTextiles();
+        menuTextiles menu = new menuTextiles();
         this.setVisible(false);
-        menuPrincipal.setVisible(true);
+        menu.setVisible(true);
     }//GEN-LAST:event_menuPrincipalActionPerformed
 
     private void menuSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuSalirActionPerformed
         System.exit(0);
     }//GEN-LAST:event_menuSalirActionPerformed
-
-    private void menuMateriaPrimaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuMateriaPrimaActionPerformed
-        MateriaPrima materia = new MateriaPrima();
-        this.setVisible(false);
-        materia.setVisible(true);
-    }//GEN-LAST:event_menuMateriaPrimaActionPerformed
 
     private void menuPedidosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuPedidosActionPerformed
         modificarPedidos pedidos = new modificarPedidos();
@@ -175,11 +174,17 @@ public class pagoTrabajadores extends javax.swing.JFrame {
         pedidos.setVisible(true);
     }//GEN-LAST:event_menuPedidosActionPerformed
 
-    private void menuPrestamosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuPrestamosActionPerformed
-        registroPrestamos prestamos = new registroPrestamos();
+    private void menuPagosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuPagosActionPerformed
+        pagoTrabajadores pago = new pagoTrabajadores();
         this.setVisible(false);
-        prestamos.setVisible(true);
-    }//GEN-LAST:event_menuPrestamosActionPerformed
+        pago.setVisible(true);
+    }//GEN-LAST:event_menuPagosActionPerformed
+
+    private void menuMateriaPrimaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuMateriaPrimaActionPerformed
+        MateriaPrima materia = new MateriaPrima();
+        this.setVisible(false);
+        materia.setVisible(true);
+    }//GEN-LAST:event_menuMateriaPrimaActionPerformed
 
     private void menuCuentaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuCuentaActionPerformed
         CuentaTotal cuenta = new CuentaTotal();
@@ -204,20 +209,20 @@ public class pagoTrabajadores extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(pagoTrabajadores.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(registroPrestamos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(pagoTrabajadores.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(registroPrestamos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(pagoTrabajadores.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(registroPrestamos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(pagoTrabajadores.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(registroPrestamos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new pagoTrabajadores().setVisible(true);
+                new registroPrestamos().setVisible(true);
             }
         });
     }
@@ -230,14 +235,15 @@ public class pagoTrabajadores extends javax.swing.JFrame {
     private javax.swing.JMenu jMenu3;
     private javax.swing.JMenu jMenu4;
     private javax.swing.JMenu jMenu5;
+    private javax.swing.JMenu jMenu6;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTable jTable1;
     private javax.swing.JMenuItem menuCuenta;
     private javax.swing.JMenuItem menuMateriaPrima;
+    private javax.swing.JMenuItem menuPagos;
     private javax.swing.JMenuItem menuPedidos;
-    private javax.swing.JMenuItem menuPrestamos;
     private javax.swing.JMenuItem menuPrincipal;
     private javax.swing.JMenuItem menuSalir;
-    private javax.swing.JTable tableTrabajadores;
     // End of variables declaration//GEN-END:variables
 }

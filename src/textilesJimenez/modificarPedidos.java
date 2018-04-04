@@ -32,134 +32,255 @@ public class modificarPedidos extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         jTextField1 = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        btnModificarPedidos = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        tablePedidos = new javax.swing.JTable();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jTextField2 = new javax.swing.JTextField();
-        jButton2 = new javax.swing.JButton();
+        btnModificarBordados = new javax.swing.JButton();
         jScrollPane2 = new javax.swing.JScrollPane();
-        jTable2 = new javax.swing.JTable();
+        tableBordado = new javax.swing.JTable();
         jLabel1 = new javax.swing.JLabel();
-        jMenuBar1 = new javax.swing.JMenuBar();
+        jMenuBar2 = new javax.swing.JMenuBar();
+        jMenu3 = new javax.swing.JMenu();
+        menuInicio = new javax.swing.JMenuItem();
+        menuSalir = new javax.swing.JMenuItem();
+        jMenu4 = new javax.swing.JMenu();
+        menuTrabajadores = new javax.swing.JMenuItem();
+        jMenu5 = new javax.swing.JMenu();
+        menuPrestamos = new javax.swing.JMenuItem();
         jMenu1 = new javax.swing.JMenu();
-        jMenuItem1 = new javax.swing.JMenuItem();
-        jMenuItem2 = new javax.swing.JMenuItem();
+        menuMateriaPrima = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
+        menuCuenta = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setEnabled(false);
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel2.setFont(new java.awt.Font("Kannada Sangam MN", 1, 50)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Khmer MN", 1, 50)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Modificar pedidos");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 40, -1, 50));
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 20, -1, 70));
 
+        jLabel3.setFont(new java.awt.Font("Khmer MN", 1, 18)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Modelo:");
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 160, -1, 20));
-        getContentPane().add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 160, 200, 20));
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 160, -1, 30));
 
-        jLabel4.setFont(new java.awt.Font("Kannada MN", 1, 24)); // NOI18N
+        jTextField1.setFont(new java.awt.Font("Khmer MN", 1, 14)); // NOI18N
+        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 160, 200, 30));
+
+        jLabel4.setFont(new java.awt.Font("Khmer MN", 1, 30)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("Pedidos");
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 110, -1, -1));
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 100, -1, 40));
 
-        jButton1.setBackground(new java.awt.Color(0, 0, 0));
-        jButton1.setFont(new java.awt.Font("Kannada MN", 1, 14)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(255, 255, 255));
-        jButton1.setText("Modificar");
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 150, -1, 40));
+        btnModificarPedidos.setBackground(new java.awt.Color(255, 255, 255));
+        btnModificarPedidos.setFont(new java.awt.Font("Khmer MN", 1, 16)); // NOI18N
+        btnModificarPedidos.setText("Modificar");
+        btnModificarPedidos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnModificarPedidosActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btnModificarPedidos, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 150, 110, 50));
 
         jScrollPane1.setFont(new java.awt.Font("Kannada Sangam MN", 0, 14)); // NOI18N
 
-        jTable1.setFont(new java.awt.Font("Kannada Sangam MN", 0, 13)); // NOI18N
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        tablePedidos.setFont(new java.awt.Font("Kannada Sangam MN", 0, 13)); // NOI18N
+        tablePedidos.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null}
             },
             new String [] {
-                "Modelo", "Marca", "Fecha Entrega", "Entrega"
+                "Modelo", "Marca", "Fecha Entrega"
             }
-        ) {
-            Class[] types = new Class [] {
-                java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Boolean.class
-            };
+        ));
+        jScrollPane1.setViewportView(tablePedidos);
 
-            public Class getColumnClass(int columnIndex) {
-                return types [columnIndex];
-            }
-        });
-        jScrollPane1.setViewportView(jTable1);
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 220, 420, 250));
 
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 210, -1, 240));
-
-        jLabel5.setFont(new java.awt.Font("Kannada Sangam MN", 1, 24)); // NOI18N
+        jLabel5.setFont(new java.awt.Font("Khmer MN", 1, 30)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("Bordado");
-        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 110, -1, -1));
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 100, -1, 40));
 
-        jLabel6.setFont(new java.awt.Font("Kannada Sangam MN", 0, 13)); // NOI18N
+        jLabel6.setFont(new java.awt.Font("Khmer MN", 1, 18)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setText("Modelo:");
-        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 160, -1, 20));
-        getContentPane().add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 160, 200, 20));
+        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 160, -1, 30));
 
-        jButton2.setBackground(new java.awt.Color(0, 0, 0));
-        jButton2.setForeground(new java.awt.Color(255, 255, 255));
-        jButton2.setText("Modificar");
-        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1000, 150, -1, 40));
+        jTextField2.setFont(new java.awt.Font("Khmer MN", 1, 14)); // NOI18N
+        getContentPane().add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 160, 200, 30));
 
-        jTable2.setModel(new javax.swing.table.DefaultTableModel(
+        btnModificarBordados.setBackground(new java.awt.Color(255, 255, 255));
+        btnModificarBordados.setFont(new java.awt.Font("Khmer MN", 1, 16)); // NOI18N
+        btnModificarBordados.setText("Modificar");
+        getContentPane().add(btnModificarBordados, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 150, 110, 50));
+
+        tableBordado.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null}
             },
             new String [] {
-                "Modelo", "Marca", "Fecha Entrega", "Entrega"
+                "Modelo", "Marca", "Fecha Entrega"
             }
-        ) {
-            Class[] types = new Class [] {
-                java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Boolean.class
-            };
+        ));
+        jScrollPane2.setViewportView(tableBordado);
 
-            public Class getColumnClass(int columnIndex) {
-                return types [columnIndex];
-            }
-        });
-        jScrollPane2.setViewportView(jTable2);
-
-        getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 210, -1, 240));
+        getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 220, 420, 250));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesSistema/fondoMorado1.jpg"))); // NOI18N
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1280, 510));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 910, 510));
 
-        jMenu1.setText("Menú");
+        jMenuBar2.setFont(new java.awt.Font("Khmer Sangam MN", 0, 14)); // NOI18N
+        jMenuBar2.setPreferredSize(new java.awt.Dimension(309, 25));
 
-        jMenuItem1.setText("Menú principal");
-        jMenu1.add(jMenuItem1);
+        jMenu3.setText("Inicio");
+        jMenu3.setFont(new java.awt.Font("Khmer MN", 1, 15)); // NOI18N
 
-        jMenuItem2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesSistema/btnSalir.png"))); // NOI18N
-        jMenuItem2.setText("Salir");
-        jMenu1.add(jMenuItem2);
+        menuInicio.setFont(new java.awt.Font("Khmer MN", 0, 14)); // NOI18N
+        menuInicio.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesSistema/btnInicio.png"))); // NOI18N
+        menuInicio.setText("Menú principal");
+        menuInicio.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                menuInicioActionPerformed(evt);
+            }
+        });
+        jMenu3.add(menuInicio);
 
-        jMenuBar1.add(jMenu1);
+        menuSalir.setFont(new java.awt.Font("Khmer MN", 0, 14)); // NOI18N
+        menuSalir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesSistema/btnSalir.png"))); // NOI18N
+        menuSalir.setText("Salir");
+        menuSalir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                menuSalirActionPerformed(evt);
+            }
+        });
+        jMenu3.add(menuSalir);
 
-        jMenu2.setText("Pedidos");
-        jMenuBar1.add(jMenu2);
+        jMenuBar2.add(jMenu3);
 
-        setJMenuBar(jMenuBar1);
+        jMenu4.setText("Pagos");
+        jMenu4.setFont(new java.awt.Font("Khmer MN", 1, 15)); // NOI18N
+        jMenu4.setPreferredSize(new java.awt.Dimension(97, 30));
+
+        menuTrabajadores.setFont(new java.awt.Font("Khmer MN", 0, 14)); // NOI18N
+        menuTrabajadores.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesSistema/btnModificar.png"))); // NOI18N
+        menuTrabajadores.setText("Modificar");
+        menuTrabajadores.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                menuTrabajadoresActionPerformed(evt);
+            }
+        });
+        jMenu4.add(menuTrabajadores);
+
+        jMenuBar2.add(jMenu4);
+
+        jMenu5.setText("Préstamos");
+        jMenu5.setFont(new java.awt.Font("Khmer MN", 1, 15)); // NOI18N
+
+        menuPrestamos.setFont(new java.awt.Font("Khmer MN", 0, 14)); // NOI18N
+        menuPrestamos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesSistema/btnModificar.png"))); // NOI18N
+        menuPrestamos.setText("Modificar");
+        menuPrestamos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                menuPrestamosActionPerformed(evt);
+            }
+        });
+        jMenu5.add(menuPrestamos);
+
+        jMenuBar2.add(jMenu5);
+
+        jMenu1.setText("Materia prima");
+        jMenu1.setFont(new java.awt.Font("Khmer MN", 1, 15)); // NOI18N
+
+        menuMateriaPrima.setFont(new java.awt.Font("Khmer MN", 0, 14)); // NOI18N
+        menuMateriaPrima.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesSistema/btnModificar.png"))); // NOI18N
+        menuMateriaPrima.setText("Modificar");
+        menuMateriaPrima.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                menuMateriaPrimaActionPerformed(evt);
+            }
+        });
+        jMenu1.add(menuMateriaPrima);
+
+        jMenuBar2.add(jMenu1);
+
+        jMenu2.setText("Cuenta");
+        jMenu2.setFont(new java.awt.Font("Khmer MN", 1, 15)); // NOI18N
+
+        menuCuenta.setFont(new java.awt.Font("Khmer MN", 0, 14)); // NOI18N
+        menuCuenta.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesSistema/btnModificar.png"))); // NOI18N
+        menuCuenta.setText("Modificar");
+        menuCuenta.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                menuCuentaActionPerformed(evt);
+            }
+        });
+        jMenu2.add(menuCuenta);
+
+        jMenuBar2.add(jMenu2);
+
+        setJMenuBar(jMenuBar2);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField1ActionPerformed
+
+    private void btnModificarPedidosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnModificarPedidosActionPerformed
+        
+    }//GEN-LAST:event_btnModificarPedidosActionPerformed
+
+    private void menuInicioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuInicioActionPerformed
+        menuTextiles menu = new menuTextiles();
+        this.setVisible(false);
+        menu.setVisible(true);
+    }//GEN-LAST:event_menuInicioActionPerformed
+
+    private void menuSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuSalirActionPerformed
+        System.exit(0);
+    }//GEN-LAST:event_menuSalirActionPerformed
+
+    private void menuTrabajadoresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuTrabajadoresActionPerformed
+        pagoTrabajadores pago = new pagoTrabajadores();
+        this.setVisible(false);
+        pago.setVisible(true);
+    }//GEN-LAST:event_menuTrabajadoresActionPerformed
+
+    private void menuPrestamosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuPrestamosActionPerformed
+        registroPrestamos prestamos = new registroPrestamos();
+        this.setVisible(false);
+        prestamos.setVisible(true);
+    }//GEN-LAST:event_menuPrestamosActionPerformed
+
+    private void menuMateriaPrimaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuMateriaPrimaActionPerformed
+        MateriaPrima materia = new MateriaPrima();
+        this.setVisible(false);
+        materia.setVisible(true);
+    }//GEN-LAST:event_menuMateriaPrimaActionPerformed
+
+    private void menuCuentaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuCuentaActionPerformed
+        CuentaTotal cuenta = new CuentaTotal();
+        this.setVisible(false);
+        cuenta.setVisible(true);
+    }//GEN-LAST:event_menuCuentaActionPerformed
 
     /**
      * @param args the command line arguments
@@ -197,8 +318,8 @@ public class modificarPedidos extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
+    private javax.swing.JButton btnModificarBordados;
+    private javax.swing.JButton btnModificarPedidos;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -207,14 +328,21 @@ public class modificarPedidos extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
-    private javax.swing.JMenuBar jMenuBar1;
-    private javax.swing.JMenuItem jMenuItem1;
-    private javax.swing.JMenuItem jMenuItem2;
+    private javax.swing.JMenu jMenu3;
+    private javax.swing.JMenu jMenu4;
+    private javax.swing.JMenu jMenu5;
+    private javax.swing.JMenuBar jMenuBar2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JTable jTable1;
-    private javax.swing.JTable jTable2;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
+    private javax.swing.JMenuItem menuCuenta;
+    private javax.swing.JMenuItem menuInicio;
+    private javax.swing.JMenuItem menuMateriaPrima;
+    private javax.swing.JMenuItem menuPrestamos;
+    private javax.swing.JMenuItem menuSalir;
+    private javax.swing.JMenuItem menuTrabajadores;
+    private javax.swing.JTable tableBordado;
+    private javax.swing.JTable tablePedidos;
     // End of variables declaration//GEN-END:variables
 }
