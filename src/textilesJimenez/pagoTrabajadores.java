@@ -1,15 +1,31 @@
 package textilesJimenez;
+import java.sql.*;
+import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
 
 public class pagoTrabajadores extends javax.swing.JFrame {
 
-    /**
-     * Creates new form pagoTrabajadores
-     */
+    DefaultTableModel modelo;
+    Statement stat;
+    ResultSet resultado;
+    PreparedStatement us;
+    
     public pagoTrabajadores() {
         initComponents();
         this.setLocationRelativeTo(null);
     }
 
+    public void columnas() {
+        String[] titulos = {"Nombre", "Fecha", "Total pago"};
+        modelo = new DefaultTableModel(null, titulos);
+        this.tableTrabajadores.setModel(modelo);
+        int[] ancho = {60, 50, 50};
+        for(int i=0; i<tableTrabajadores.getColumnCount(); i++) {
+            tableTrabajadores.getColumnModel().getColumn(i).setPreferredWidth(ancho[i]);
+        }
+        tableTrabajadores.setRowHeight(25);
+    }
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -22,6 +38,7 @@ public class pagoTrabajadores extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         tableTrabajadores = new javax.swing.JTable();
+        btnGuardar = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
@@ -41,7 +58,7 @@ public class pagoTrabajadores extends javax.swing.JFrame {
 
         jLabel2.setFont(new java.awt.Font("Khmer MN", 1, 50)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel2.setText("Pagos a trabajadores");
+        jLabel2.setText("Pago trabajadores");
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 40, -1, 50));
 
         tableTrabajadores.setFont(new java.awt.Font("Khmer MN", 0, 16)); // NOI18N
@@ -58,7 +75,17 @@ public class pagoTrabajadores extends javax.swing.JFrame {
         ));
         jScrollPane1.setViewportView(tableTrabajadores);
 
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 140, 760, 320));
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 140, 760, 250));
+
+        btnGuardar.setBackground(new java.awt.Color(255, 255, 255));
+        btnGuardar.setFont(new java.awt.Font("Khmer MN", 1, 15)); // NOI18N
+        btnGuardar.setText("Guardar");
+        btnGuardar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnGuardarActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btnGuardar, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 410, 110, 50));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesSistema/fondoMorado1.jpg"))); // NOI18N
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 910, 530));
@@ -187,6 +214,24 @@ public class pagoTrabajadores extends javax.swing.JFrame {
         cuenta.setVisible(true);
     }//GEN-LAST:event_menuCuentaActionPerformed
 
+    private void btnGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarActionPerformed
+        try {
+            for(int i = 0; i < tableTrabajadores.getRowCount(); i++) {
+                us = cn.prepareStatement("INSERT INTO pagoTrabajadores (nombre, fecha, total) VALUES (?,?,?)");
+                us.setString(1, tableTrabajadores.getValueAt(i, 0).toString());
+                us.setString(2, tableTrabajadores.getValueAt(i, 1).toString());
+                us.setString(3, tableTrabajadores.getValueAt(i, 2).toString());
+                if (JOptionPane.showConfirmDialog(null, "¿Agregar pagos?", "Confirmación", JOptionPane.YES_NO_OPTION)
+                        == JOptionPane.YES_OPTION) {
+                        us.executeUpdate();
+                        JOptionPane.showMessageDialog(null, "Datos actualizados");
+                }
+            }
+        } catch(Exception e) {
+            e.getMessage();
+        }
+    }//GEN-LAST:event_btnGuardarActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -223,6 +268,7 @@ public class pagoTrabajadores extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnGuardar;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JMenu jMenu1;
@@ -240,4 +286,7 @@ public class pagoTrabajadores extends javax.swing.JFrame {
     private javax.swing.JMenuItem menuSalir;
     private javax.swing.JTable tableTrabajadores;
     // End of variables declaration//GEN-END:variables
+
+    conectar cc = new conectar();
+    Connection cn = cc.conexion();
 }
