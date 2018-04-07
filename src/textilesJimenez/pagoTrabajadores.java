@@ -2,6 +2,8 @@ package textilesJimenez;
 import java.sql.*;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
+import org.netbeans.lib.awtextra.AbsoluteConstraints;
+import org.netbeans.lib.awtextra.AbsoluteLayout;
 
 public class pagoTrabajadores extends javax.swing.JFrame {
 

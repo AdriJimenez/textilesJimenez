@@ -1,5 +1,8 @@
 package textilesJimenez;
 
+import org.netbeans.lib.awtextra.AbsoluteConstraints;
+import org.netbeans.lib.awtextra.AbsoluteLayout;
+
 public class menuTextiles extends javax.swing.JFrame {
 
     /**
