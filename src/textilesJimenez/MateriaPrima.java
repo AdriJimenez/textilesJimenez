@@ -68,10 +68,12 @@ public class MateriaPrima extends javax.swing.JFrame {
         ));
         jScrollPane1.setViewportView(jTable1);
 
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 110, 750, 350));
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 110, 750, 250));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesSistema/fondoMorado1.jpg"))); // NOI18N
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 910, 510));
+
+        jMenuBar1.setPreferredSize(new java.awt.Dimension(327, 25));
 
         jMenu1.setText("Inicio");
         jMenu1.setFont(new java.awt.Font("Khmer MN", 1, 15)); // NOI18N

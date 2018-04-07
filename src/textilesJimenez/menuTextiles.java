@@ -138,9 +138,9 @@ public class menuTextiles extends javax.swing.JFrame {
         jMenuBar1.setSize(new java.awt.Dimension(86, 18));
 
         jMenu1.setText("Inicio");
-        jMenu1.setFont(new java.awt.Font("Kannada Sangam MN", 0, 14)); // NOI18N
+        jMenu1.setFont(new java.awt.Font("Khmer MN", 1, 15)); // NOI18N
 
-        menuSalir.setFont(new java.awt.Font("Kannada Sangam MN", 0, 14)); // NOI18N
+        menuSalir.setFont(new java.awt.Font("Khmer MN", 0, 14)); // NOI18N
         menuSalir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesSistema/btnSalir.png"))); // NOI18N
         menuSalir.setText("Salir");
         menuSalir.addActionListener(new java.awt.event.ActionListener() {

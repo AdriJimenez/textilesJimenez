@@ -6,24 +6,11 @@ import javax.swing.table.DefaultTableModel;
 public class pagoTrabajadores extends javax.swing.JFrame {
 
     DefaultTableModel modelo;
-    Statement stat;
-    ResultSet resultado;
     PreparedStatement us;
     
     public pagoTrabajadores() {
         initComponents();
         this.setLocationRelativeTo(null);
-    }
-
-    public void columnas() {
-        String[] titulos = {"Nombre", "Fecha", "Total pago"};
-        modelo = new DefaultTableModel(null, titulos);
-        this.tableTrabajadores.setModel(modelo);
-        int[] ancho = {60, 50, 50};
-        for(int i=0; i<tableTrabajadores.getColumnCount(); i++) {
-            tableTrabajadores.getColumnModel().getColumn(i).setPreferredWidth(ancho[i]);
-        }
-        tableTrabajadores.setRowHeight(25);
     }
     
     /**
@@ -67,6 +54,17 @@ public class pagoTrabajadores extends javax.swing.JFrame {
                 {null, null, null},
                 {null, null, null},
                 {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
                 {null, null, null}
             },
             new String [] {
@@ -75,7 +73,7 @@ public class pagoTrabajadores extends javax.swing.JFrame {
         ));
         jScrollPane1.setViewportView(tableTrabajadores);
 
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 140, 760, 250));
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 110, 760, 250));
 
         btnGuardar.setBackground(new java.awt.Color(255, 255, 255));
         btnGuardar.setFont(new java.awt.Font("Khmer MN", 1, 15)); // NOI18N
@@ -85,10 +83,12 @@ public class pagoTrabajadores extends javax.swing.JFrame {
                 btnGuardarActionPerformed(evt);
             }
         });
-        getContentPane().add(btnGuardar, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 410, 110, 50));
+        getContentPane().add(btnGuardar, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 370, 110, 50));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesSistema/fondoMorado1.jpg"))); // NOI18N
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 910, 530));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 910, 510));
+
+        jMenuBar1.setPreferredSize(new java.awt.Dimension(378, 25));
 
         jMenu1.setText("Menú");
         jMenu1.setFont(new java.awt.Font("Khmer MN", 1, 15)); // NOI18N

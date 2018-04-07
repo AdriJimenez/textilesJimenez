@@ -1,10 +1,13 @@
 package textilesJimenez;
 
-/**
- *
- * @author adrianajimeneznava
- */
+import java.sql.*;
+import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
+
 public class registroPrestamos extends javax.swing.JFrame {
+
+    DefaultTableModel modelo;
+    PreparedStatement us;
 
     public registroPrestamos() {
         initComponents();
@@ -23,7 +26,8 @@ public class registroPrestamos extends javax.swing.JFrame {
         jMenu4 = new javax.swing.JMenu();
         jLabel2 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        tablePrestamos = new javax.swing.JTable();
+        btnGuardar = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
@@ -49,9 +53,20 @@ public class registroPrestamos extends javax.swing.JFrame {
         jLabel2.setText("Registro de préstamos");
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 30, -1, 70));
 
-        jTable1.setFont(new java.awt.Font("Khmer MN", 0, 15)); // NOI18N
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        tablePrestamos.setFont(new java.awt.Font("Khmer MN", 0, 15)); // NOI18N
+        tablePrestamos.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
                 {null, null},
                 {null, null},
                 {null, null},
@@ -61,12 +76,24 @@ public class registroPrestamos extends javax.swing.JFrame {
                 "Fecha", "Cantidad"
             }
         ));
-        jScrollPane1.setViewportView(jTable1);
+        jScrollPane1.setViewportView(tablePrestamos);
 
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 110, 710, 340));
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 110, 710, 250));
+
+        btnGuardar.setBackground(new java.awt.Color(255, 255, 255));
+        btnGuardar.setFont(new java.awt.Font("Khmer MN", 1, 15)); // NOI18N
+        btnGuardar.setText("Guardar");
+        btnGuardar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnGuardarActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btnGuardar, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 370, 110, 50));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesSistema/fondoMorado1.jpg"))); // NOI18N
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 910, 510));
+
+        jMenuBar1.setPreferredSize(new java.awt.Dimension(352, 25));
 
         jMenu1.setText("Inicio");
         jMenu1.setFont(new java.awt.Font("Khmer MN", 1, 15)); // NOI18N
@@ -192,6 +219,23 @@ public class registroPrestamos extends javax.swing.JFrame {
         cuenta.setVisible(true);
     }//GEN-LAST:event_menuCuentaActionPerformed
 
+    private void btnGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarActionPerformed
+        try {
+            for (int i = 0; i < tablePrestamos.getRowCount(); i++) {
+                us = cn.prepareStatement("INSERT INTO prestamos (fecha, cantidad) VALUES (?,?)");
+                us.setString(1, tablePrestamos.getValueAt(i, 0).toString());
+                us.setString(2, tablePrestamos.getValueAt(i, 1).toString());
+                if (JOptionPane.showConfirmDialog(null, "¿Agregar préstamo?", "Confirmación", JOptionPane.YES_NO_OPTION)
+                        == JOptionPane.YES_OPTION) {
+                        us.executeUpdate();
+                        JOptionPane.showMessageDialog(null, "Datos actualizados");
+                }
+            }
+        } catch (Exception e) {
+            e.getMessage();
+        }
+    }//GEN-LAST:event_btnGuardarActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -228,6 +272,7 @@ public class registroPrestamos extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnGuardar;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JMenu jMenu1;
@@ -238,12 +283,15 @@ public class registroPrestamos extends javax.swing.JFrame {
     private javax.swing.JMenu jMenu6;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jTable1;
     private javax.swing.JMenuItem menuCuenta;
     private javax.swing.JMenuItem menuMateriaPrima;
     private javax.swing.JMenuItem menuPagos;
     private javax.swing.JMenuItem menuPedidos;
     private javax.swing.JMenuItem menuPrincipal;
     private javax.swing.JMenuItem menuSalir;
+    private javax.swing.JTable tablePrestamos;
     // End of variables declaration//GEN-END:variables
+
+    conectar cc = new conectar();
+    Connection cn = cc.conexion();
 }
