@@ -1,19 +1,14 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package textilesJimenez;
 
-/**
- *
- * @author adrianajimeneznava
- */
+import java.sql.*;
+import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
+
 public class MateriaPrima extends javax.swing.JFrame {
 
-    /**
-     * Creates new form MateriaPrima
-     */
+    DefaultTableModel modelo;
+    PreparedStatement us;
+    
     public MateriaPrima() {
         initComponents();
         this.setLocationRelativeTo(null);
@@ -30,7 +25,8 @@ public class MateriaPrima extends javax.swing.JFrame {
 
         jLabel2 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        tableHilo = new javax.swing.JTable();
+        btnGuardar = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
@@ -52,10 +48,10 @@ public class MateriaPrima extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("Khmer MN", 1, 50)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Materia prima");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 30, 310, 60));
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 30, 310, 70));
 
-        jTable1.setFont(new java.awt.Font("Khmer MN", 0, 14)); // NOI18N
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        tableHilo.setFont(new java.awt.Font("Khmer MN", 0, 14)); // NOI18N
+        tableHilo.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
                 {null, null, null, null},
@@ -66,9 +62,19 @@ public class MateriaPrima extends javax.swing.JFrame {
                 "Fecha", "No. Factura", "Kilos", "Total Neto"
             }
         ));
-        jScrollPane1.setViewportView(jTable1);
+        jScrollPane1.setViewportView(tableHilo);
 
         getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 110, 750, 250));
+
+        btnGuardar.setBackground(new java.awt.Color(255, 255, 255));
+        btnGuardar.setFont(new java.awt.Font("Khmer MN", 1, 15)); // NOI18N
+        btnGuardar.setText("Guardar");
+        btnGuardar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnGuardarActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btnGuardar, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 370, 110, 50));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesSistema/fondoMorado1.jpg"))); // NOI18N
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 910, 510));
@@ -199,6 +205,25 @@ public class MateriaPrima extends javax.swing.JFrame {
         cuenta.setVisible(true);
     }//GEN-LAST:event_menuCuentaActionPerformed
 
+    private void btnGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarActionPerformed
+        try {
+            for (int i=0; i<tableHilo.getRowCount(); i++) {
+                us = cn.prepareStatement("INSERT INTO materiaPrima (fecha, noFactura, kilos, totalNeto) VALUES (?,?,?,?)");
+                us.setString(1, tableHilo.getValueAt(i, 0).toString());
+                us.setString(2, tableHilo.getValueAt(i, 1).toString());
+                us.setString(3, tableHilo.getValueAt(i, 2).toString());
+                us.setString(4, tableHilo.getValueAt(i, 3).toString());
+                if (JOptionPane.showConfirmDialog(null, "¿Agregar información factura?", "Confirmación", JOptionPane.YES_NO_OPTION)
+                        == JOptionPane.YES_OPTION) {
+                        us.executeUpdate();
+                        JOptionPane.showMessageDialog(null, "Datos actualizados");
+                }
+            }   
+        } catch (Exception e) {
+            e.getMessage();
+        }
+    }//GEN-LAST:event_btnGuardarActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -235,6 +260,7 @@ public class MateriaPrima extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnGuardar;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JMenu jMenu1;
@@ -244,12 +270,15 @@ public class MateriaPrima extends javax.swing.JFrame {
     private javax.swing.JMenu jMenu5;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jTable1;
     private javax.swing.JMenuItem menuCuenta;
     private javax.swing.JMenuItem menuInicio;
     private javax.swing.JMenuItem menuPagos;
     private javax.swing.JMenuItem menuPedidos;
     private javax.swing.JMenuItem menuPrestamos;
     private javax.swing.JMenuItem menuSalir;
+    private javax.swing.JTable tableHilo;
     // End of variables declaration//GEN-END:variables
+
+    conectar cc = new conectar();
+    Connection cn = cc.conexion();
 }
