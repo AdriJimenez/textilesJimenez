@@ -1,19 +1,15 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package textilesJimenez;
 
-/**
- *
- * @author adrianajimeneznava
- */
+import java.sql.*;
+import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
+import org.netbeans.lib.awtextra.AbsoluteLayout;
+
 public class CuentaTotal extends javax.swing.JFrame {
 
-    /**
-     * Creates new form CuentaTotal
-     */
+    DefaultTableModel modelo;
+    PreparedStatement us;
+    
     public CuentaTotal() {
         initComponents();
         this.setLocationRelativeTo(null);
@@ -38,6 +34,9 @@ public class CuentaTotal extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
+        btnGuardarChaleco = new javax.swing.JButton();
+        btnGuardarNino = new javax.swing.JButton();
+        btnGuardarNina = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
@@ -75,7 +74,7 @@ public class CuentaTotal extends javax.swing.JFrame {
         ));
         jScrollPane5.setViewportView(tableSueteresNina);
 
-        getContentPane().add(jScrollPane5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 320, 400, 160));
+        getContentPane().add(jScrollPane5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 320, 400, 140));
 
         tableSueteresNino.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -90,7 +89,7 @@ public class CuentaTotal extends javax.swing.JFrame {
         ));
         jScrollPane3.setViewportView(tableSueteresNino);
 
-        getContentPane().add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 110, 400, 160));
+        getContentPane().add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 100, 400, 140));
 
         tableChaleco.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -105,7 +104,7 @@ public class CuentaTotal extends javax.swing.JFrame {
         ));
         jScrollPane2.setViewportView(tableChaleco);
 
-        getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 110, 400, 160));
+        getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 100, 400, 140));
 
         jLabel3.setFont(new java.awt.Font("Khmer MN", 1, 20)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
@@ -115,12 +114,32 @@ public class CuentaTotal extends javax.swing.JFrame {
         jLabel5.setFont(new java.awt.Font("Khmer MN", 1, 20)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("Chaleco");
-        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 80, -1, -1));
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 70, -1, -1));
 
         jLabel4.setFont(new java.awt.Font("Khmer MN", 1, 20)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("Suéteres niño");
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 80, -1, -1));
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 70, -1, -1));
+
+        btnGuardarChaleco.setBackground(new java.awt.Color(255, 255, 255));
+        btnGuardarChaleco.setFont(new java.awt.Font("Khmer MN", 1, 15)); // NOI18N
+        btnGuardarChaleco.setText("Guardar");
+        btnGuardarChaleco.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnGuardarChalecoActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btnGuardarChaleco, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 240, 110, 50));
+
+        btnGuardarNino.setBackground(new java.awt.Color(255, 255, 255));
+        btnGuardarNino.setFont(new java.awt.Font("Khmer MN", 1, 15)); // NOI18N
+        btnGuardarNino.setText("Guardar");
+        getContentPane().add(btnGuardarNino, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 240, 110, 50));
+
+        btnGuardarNina.setBackground(new java.awt.Color(255, 255, 255));
+        btnGuardarNina.setFont(new java.awt.Font("Khmer MN", 1, 15)); // NOI18N
+        btnGuardarNina.setText("Guardar");
+        getContentPane().add(btnGuardarNina, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 460, 110, 50));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesSistema/fondoMorado1.jpg"))); // NOI18N
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 910, 510));
@@ -251,6 +270,10 @@ public class CuentaTotal extends javax.swing.JFrame {
         materia.setVisible(true);
     }//GEN-LAST:event_menuMateriaPrimaActionPerformed
 
+    private void btnGuardarChalecoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarChalecoActionPerformed
+        
+    }//GEN-LAST:event_btnGuardarChalecoActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -287,6 +310,9 @@ public class CuentaTotal extends javax.swing.JFrame {
     }
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnGuardarChaleco;
+    private javax.swing.JButton btnGuardarNina;
+    private javax.swing.JButton btnGuardarNino;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -311,4 +337,8 @@ public class CuentaTotal extends javax.swing.JFrame {
     private javax.swing.JTable tableSueteresNina;
     private javax.swing.JTable tableSueteresNino;
     // End of variables declaration//GEN-END:variables
+
+    conectar cc = new conectar();
+    Connection cn = cc.conexion();
+    
 }
