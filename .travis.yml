@@ -1,0 +1,4 @@
+language: java
+os: mac
+group: stable
+dist: trusty
