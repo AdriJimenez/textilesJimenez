@@ -3,8 +3,6 @@ package textilesJimenez;
 import java.sql.*;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
-import org.netbeans.lib.awtextra.AbsoluteConstraints;
-import org.netbeans.lib.awtextra.AbsoluteLayout;
 
 public class CuentaTotal extends javax.swing.JFrame {
 
@@ -35,9 +33,9 @@ public class CuentaTotal extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        btnGuardarChaleco = new javax.swing.JButton();
         btnGuardarNino = new javax.swing.JButton();
         btnGuardarNina = new javax.swing.JButton();
+        btnGuardarChaleco = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
@@ -122,6 +120,26 @@ public class CuentaTotal extends javax.swing.JFrame {
         jLabel4.setText("Suéteres niño");
         getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 70, -1, -1));
 
+        btnGuardarNino.setBackground(new java.awt.Color(255, 255, 255));
+        btnGuardarNino.setFont(new java.awt.Font("Khmer MN", 1, 15)); // NOI18N
+        btnGuardarNino.setText("Guardar");
+        btnGuardarNino.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnGuardarNinoActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btnGuardarNino, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 240, 110, 50));
+
+        btnGuardarNina.setBackground(new java.awt.Color(255, 255, 255));
+        btnGuardarNina.setFont(new java.awt.Font("Khmer MN", 1, 15)); // NOI18N
+        btnGuardarNina.setText("Guardar");
+        btnGuardarNina.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnGuardarNinaActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btnGuardarNina, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 460, 110, 50));
+
         btnGuardarChaleco.setBackground(new java.awt.Color(255, 255, 255));
         btnGuardarChaleco.setFont(new java.awt.Font("Khmer MN", 1, 15)); // NOI18N
         btnGuardarChaleco.setText("Guardar");
@@ -131,16 +149,6 @@ public class CuentaTotal extends javax.swing.JFrame {
             }
         });
         getContentPane().add(btnGuardarChaleco, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 240, 110, 50));
-
-        btnGuardarNino.setBackground(new java.awt.Color(255, 255, 255));
-        btnGuardarNino.setFont(new java.awt.Font("Khmer MN", 1, 15)); // NOI18N
-        btnGuardarNino.setText("Guardar");
-        getContentPane().add(btnGuardarNino, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 240, 110, 50));
-
-        btnGuardarNina.setBackground(new java.awt.Color(255, 255, 255));
-        btnGuardarNina.setFont(new java.awt.Font("Khmer MN", 1, 15)); // NOI18N
-        btnGuardarNina.setText("Guardar");
-        getContentPane().add(btnGuardarNina, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 460, 110, 50));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesSistema/fondoMorado1.jpg"))); // NOI18N
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 910, 510));
@@ -272,8 +280,64 @@ public class CuentaTotal extends javax.swing.JFrame {
     }//GEN-LAST:event_menuMateriaPrimaActionPerformed
 
     private void btnGuardarChalecoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarChalecoActionPerformed
-        
+        try {
+            for(int i = 0; i < tableChaleco.getRowCount(); i++) {
+                us = cn.prepareStatement("INSERT INTO cuentaChalecos (modelo, noOrden, cantidad, precio, total) VALUES (?,?,?,?,?)");
+                us.setString(1, tableChaleco.getValueAt(i, 0).toString());
+                us.setString(2, tableChaleco.getValueAt(i, 1).toString());
+                us.setString(3, tableChaleco.getValueAt(i, 2).toString());
+                us.setString(4, tableChaleco.getValueAt(i, 3).toString());
+                us.setString(5, tableChaleco.getValueAt(i, 4).toString());
+                if (JOptionPane.showConfirmDialog(null, "¿Agregar información?", "Confirmación", JOptionPane.YES_NO_OPTION)
+                        == JOptionPane.YES_OPTION) {
+                        us.executeUpdate();
+                        JOptionPane.showMessageDialog(null, "Datos actualizados");
+                }
+            }
+        } catch (Exception e) {
+            e.getMessage();
+        }
     }//GEN-LAST:event_btnGuardarChalecoActionPerformed
+
+    private void btnGuardarNinoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarNinoActionPerformed
+        try {
+            for(int i = 0; i < tableSueteresNino.getRowCount(); i++) {
+                us = cn.prepareStatement("INSERT INTO cuentaSueteresNino (modelo, noOrden, cantidad, precio, total) VALUES (?,?,?,?,?)");
+                us.setString(1, tableSueteresNino.getValueAt(i, 0).toString());
+                us.setString(2, tableSueteresNino.getValueAt(i, 1).toString());
+                us.setString(3, tableSueteresNino.getValueAt(i, 2).toString());
+                us.setString(4, tableSueteresNino.getValueAt(i, 3).toString());
+                us.setString(5, tableSueteresNino.getValueAt(i, 4).toString());
+                if (JOptionPane.showConfirmDialog(null, "¿Agregar información?", "Confirmación", JOptionPane.YES_NO_OPTION)
+                        == JOptionPane.YES_OPTION) {
+                        us.executeUpdate();
+                        JOptionPane.showMessageDialog(null, "Datos actualizados");
+                }
+            }
+        } catch (Exception e) {
+            e.getMessage();
+        }
+    }//GEN-LAST:event_btnGuardarNinoActionPerformed
+
+    private void btnGuardarNinaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarNinaActionPerformed
+        try {
+            for(int i = 0; i < tableSueteresNina.getRowCount(); i++) {
+                us = cn.prepareStatement("INSERT INTO cuentaSueteresNina (modelo, noOrden, cantidad, precio, total) VALUES (?,?,?,?,?)");
+                us.setString(1, tableSueteresNina.getValueAt(i, 0).toString());
+                us.setString(2, tableSueteresNina.getValueAt(i, 1).toString());
+                us.setString(3, tableSueteresNina.getValueAt(i, 2).toString());
+                us.setString(4, tableSueteresNina.getValueAt(i, 3).toString());
+                us.setString(5, tableSueteresNina.getValueAt(i, 4).toString());
+                if (JOptionPane.showConfirmDialog(null, "¿Agregar información?", "Confirmación", JOptionPane.YES_NO_OPTION)
+                        == JOptionPane.YES_OPTION) {
+                        us.executeUpdate();
+                        JOptionPane.showMessageDialog(null, "Datos actualizados");
+                }
+            }
+        } catch (Exception e) {
+            e.getMessage();
+        }
+    }//GEN-LAST:event_btnGuardarNinaActionPerformed
 
     /**
      * @param args the command line arguments
@@ -341,5 +405,4 @@ public class CuentaTotal extends javax.swing.JFrame {
 
     conectar cc = new conectar();
     Connection cn = cc.conexion();
-    
 }
