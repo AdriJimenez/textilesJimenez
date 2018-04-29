@@ -51,7 +51,7 @@ La materia prima también es importante conocer el total que se invierte porque 
            - [Materia prima](#materia-prima)
            - [Registro de préstamos](#registros-de-préstamos)
            - [Cuenta total](#cuenta-total)
-     - [Sección de referencia para usuario administrador](#sección-de-referencia-para-usuario-administrador)
+     - [Sección de referencia para usuario administrador](#sección-de-referencia-para-usuario-administrador)
 - [Roadmap](#roadmap)
      - [Requerimientos a implementar en un futuro](#requerimientos-a-implementar-en-un-futuro)
 
