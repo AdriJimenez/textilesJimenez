@@ -108,3 +108,20 @@ La primera pantalla que visualizará será el menú principal con las opciones:
 - Préstamos
 - Cuenta
 
+#### Pedidos
+
+En la opción Pedidos se tendrá el botón Modificar, al dar clic en el botón el usuario ingresará a la pantalla principal Pedidos y Bordado.
+
+La pantalla controlará las modificaciones de las fechas de entrega para Pedidos y Bordado; en la sección de Pedidos se tendrá un TextField donde el usuario ingresará el modelo del suéter a buscar, a continuación, dará clic en el botón “Buscar”, en la tabla se mostrarán los resultados a partir de la búsqueda realizada en la base de datos; el usuario seleccionará la fila en la columna Fecha del modelo deseado.
+
+En la parte inferior de la pantalla se encuentra otro TextField donde el usuario ingresará el nuevo estatus del modelo seleccionado, teniendo como opciones:
+
+ •	Modificar la fecha de entrega
+ • Cambiar el estatus a Entregado
+
+En la sección de Bordados se tendrá un TextField donde el usuario ingresará el modelo del suéter a buscar, a continuación, dará clic en el botón “Buscar”, en la tabla se mostrarán los resultados a partir de la búsqueda realizada en la base de datos; el usuario seleccionará la fila en la columna Fecha del modelo deseado.
+
+De la misma manera que en Pedidos, el usuario ingresará el nuevo estatus del modelo seleccionado, teniendo como opciones:
+
+  • Modificar la fecha de entrega
+  • Cambiar el estatus a Entregado
