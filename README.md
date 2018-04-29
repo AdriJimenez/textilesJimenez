@@ -1,4 +1,10 @@
+:toc: macro
+:toc-title:
+:toclevels: 99
+
 # Textiles Jiménez
+
+toc::[]
 
 ## Descripción
 
@@ -29,8 +35,17 @@ La materia prima también es importante conocer el total que se invierte porque 
 
 ## Arquitectura
 
+![](arquitectura.jpg)
 
 
+## Tabla de contenidos
 
 
+## Requerimientos
 
+### Servidores de aplicación, base de datos
+
+- Servidor de aplicación. MAMP versión 4
+- Base de datos. MySQL con PHP
+
+### Paquetes adicionales
