@@ -1,5 +1,4 @@
 # Textiles Jiménez
-
 ## Descripción
 
  Programa desarrollado para el control de la contabilidad de la empresa Textiles Jiménez, con el fin de controlar las áreas económicas y tener la información correcta sobre los ingresos y egresos. Es importante conocer los valores de cada una de las áreas para realizar mayor o menor inversión conforme se vayan realizando las entregas.
