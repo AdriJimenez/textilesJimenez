@@ -35,8 +35,10 @@ La materia prima también es importante conocer el total que se invierte porque 
 
 ## Tabla de contenidos
 - [Requerimientos](#requerimientos)
+
   - [Servidores de aplicación y base de datos](#servidores-de-aplicación-y-base-de-datos)
   - [Paquetes adicionales](#Paquetes-adicionales)
+  
 - [Configuración](#configuración)
 - [Uso](#uso)
 
