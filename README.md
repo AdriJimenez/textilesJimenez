@@ -13,7 +13,7 @@
 
 - Materia prima
 
-- Pago a trabajadores
+- Pago trabajadores
 
 El problema principal es realizar el cálculo cuando se termina la temporada se tiene que realizar la cuenta y no se tienen los valores correctos para que la empresa conozca cuánto fue el total de su inversión en materia prima, la cantidad exacta en el pago a los trabajadores y también el total de la ganancia para la empresa.
 
@@ -125,3 +125,79 @@ De la misma manera que en Pedidos, el usuario ingresará el nuevo estatus del mo
 
   • Modificar la fecha de entrega
   • Cambiar el estatus a Entregado
+
+#### Pagos trabajadores
+
+En el menú principal, en la opción Pagos se tendrá el botón Modificar, al dar clic en el botón el usuario ingresará a la pantalla principal Pagos Trabajadores.
+
+En la pantalla Pagos Trabajadores se controlará la información con referencia a los pagos realizados a los trabajadores tomando en cuenta que los pagos son realizados semanalmente. La pantalla solo cuenta con una tabla donde ingresarán los datos del empleado, dicha tabla tiene las columnas:
+
+  •	Nombre
+  •	Fecha
+  •	Total pago
+
+El usuario tendrá que ingresar valores correctos en cada columna de la tabla, cuando termine de llenar la fila se dará doble clic sobre la fila y a continuación en el botón Guardar que se encuentra ubicado en la parte inferior derecha, se mostrará un mensaje solicitando la confirmación del ingreso de datos, al dar clic en Si se realizará la actualización en la base de datos por el contrario al dar clic en No regresará a la misma pantalla.
+
+#### Registro de préstamos
+
+En el menú principal se seleccionará la pestaña Préstamos donde se mostrará el botón Modificar, al dar clic en el botón el usuario ingresará a la pantalla principal Registro de préstamos.
+
+En la pantalla Registro de préstamos se controlará los préstamos que le otorgan a la empresa los principales compradores para conocer el total de préstamos que se realizan en toda la temporada.
+
+En dicha pantalla se contará con una tabla donde se ingresarán los datos necesarios para tener dicho control, la tabla contiene las columnas:
+
+  •	Fecha
+  •	Cantidad
+
+El usuario tendrá que ingresar los valores solicitados en cada columna para poder realizar el registro de forma exitosa, cuando se termine de llenar los dos campos se dará clic en el botón Guardar que se encuentra localizado en la parte inferior derecha, se mostrará un mensaje de confirmación para poder ingresar los valores a la base de datos y tener un registro exitoso.
+
+#### Materia prima
+
+En el menú principal se seleccionará la pestaña Materia prima donde se mostrará el botón Modificar, al dar clic en dicho botón el usuario ingresará en la pantalla principal Materia prima.
+
+En la pantalla Materia prima se controlará la compra de la materia prima, en la empresa Textiles Jiménez se trabaja con hilo acrílico calibre 2/30, es importante para la empresa tener el control sobre esta información porque el precio de la materia prima puede tener varios cambios a lo largo del año, además de conocer los kilos necesarios para producir cierto número de prendas.
+
+En la pantalla se tendrá una tabla donde se ingresará la información:
+
+  •	Fecha
+  •	No. Factura
+  •	Kilos
+  •	Total Neto
+
+El usuario tendrá que ingresar valores en cada columna para poder realizar el registro en la base de datos de forma exitosa, cuando se termine de llenar las columnas de la tabla se dará clic en el botón Guardar que se encuentra localizado en la parte inferior derecha, se mostrará un mensaje de confirmación para ingresar la información de la factura en la base de datos.
+
+#### Cuenta Total
+
+En el menú principal se seleccionará la pestaña Cuenta donde se mostrará el botón Modificar, al dar clic en dicho botón el usuario ingresará en la pantalla principal Cuenta Total.
+
+En la pantalla Cuenta Total se controlará la información de los pedidos realizados por los compradores, se divide en tres secciones:
+
+  •	Chaleco
+  •	Suéteres niño
+  •	Suéteres niña
+  
+Las tres tablas cuentan con las mismas columnas las cuales son:
+
+  •	Modelo
+  •	No. Orden
+  •	Cantidad
+  •	Precio
+  •	Total
+  
+Se tiene que ingresar información en todas las columnas para no generar problemas con la base de datos, además de ser necesario todos los datos para que la contabilidad sea correcta cuando se consulte al final de la temporada. Después de ingresar los datos en la tabla deseada, el usuario dará clic en el botón “Guardar”.
+
+
+### Sección de referencia para usuario administrador
+
+No se cuentan con áreas exclusivas porque este sistema lo utilizará solamente el gerente de la empresa, se instalará solamente en su equipo personal. El administrador podrá ver las mismas funciones que el gerente.
+
+
+## Roadmap
+
+### Requerimientos a implementar en un futuro
+
+Los requerimientos por implementar son:
+
+  •	Control en las fechas de entrega, marcar advertencia por fecha de vencimiento.
+  •	Generar reporte mensual de ingresos y egresos.
+  •	Desarrollo de aplicación móvil.
