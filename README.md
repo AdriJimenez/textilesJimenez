@@ -48,3 +48,61 @@ La materia prima también es importante conocer el total que se invierte porque 
 - Base de datos. MySQL con PHP
 
 ### Paquetes adicionales
+
+Ninguno
+
+### Versión de Java
+- Java. 8
+- JDK. 1.8
+- NetBeans. 8.2
+
+
+## Instalación
+
+### Instalación del ambiente de desarollo
+
+El ejecutable se creará en el programa Launch4j para que sea extensión .exe, además de crear el archivo .jar
+
+Utilizando este programa, el ejecutable se podrá correr en la computadora seleccionada e incluso volver a instalar si se llega a desinstalar por alguna circunstancia externa al administrador.
+
+_Instrucciones:_
+- Ejecutable MAMP en el escritorio, dar doble clic y posteriormente dar clic en “Iniciar Servidores”.
+- El usuario dará doble clic sobre el ejecutable TextilesJimenez.jar; que se encontrará ubicado en el escritorio del equipo.
+- La aplicación se abrirá y el usuario podrá comenzar a utilizarla.
+
+
+### Ejecución de pruebas manualmente
+
+Las pruebas se realizan de una manera sencilla, si se abre la página principal de phpMyAdmin y no se tiene respuesta es porque no se ha iniciado el servidor MySQL Server.
+
+Otra prueba es al ingresar información en las tablas y que no se guarde el registro en la base de datos.
+
+Las pruebas no pueden ser muy variadas para este sistema porque su funcionamiento es básico y solo interviene el sistema con la base de datos.
+
+
+## Configuración
+
+### Configuración del producto
+El sistema TextilesJimenez solo requiere la configuración de la base de datos, la instalación del servidor en este caso MAMP para que pueda realizar la conexión y los cambios efectuados se guarden de forma correcta.
+
+La aplicación TextilesJimenez ya está configurada para funcionar sin la necesidad de alguna configuración adicional.
+
+### Configuración de los requerimientos
+- Instalación de MAMP.
+- Corroborar que el puerto de Apache sea 80.
+- Corroborar que el puerto de MySQL sea 3306.
+
+
+## Uso
+
+### Manual para usuario final
+
+El usuario ingresará a la aplicación ubicada en el escritorio de la computadora principal.
+La primera pantalla que visualizará será el menú principal con las opciones:
+
+- Pedidos
+- Pagos
+- Materia prima
+- Préstamos
+- Cuenta
+
