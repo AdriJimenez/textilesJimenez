@@ -37,6 +37,7 @@ La materia prima también es importante conocer el total que se invierte porque 
 - [Requerimientos](#requerimientos)
      - [Servidores de aplicación y base de datos](#servidores-de-aplicacion-base-de-datos)
      - [Paquetes adicionales](#paquetes-adicionales)
+     - [Versión de Java](versión-de-java)
 - [Configuración](#configuración)
 - [Uso](#uso)
 
