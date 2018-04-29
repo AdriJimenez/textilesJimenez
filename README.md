@@ -39,6 +39,7 @@ La materia prima también es importante conocer el total que se invierte porque 
      - [Paquetes adicionales](#paquetes-adicionales)
      - [Version de Java](version-de-java)
 - [Instalación](#instalación)
+     - [Instalación del ambiente de desarrollo](#instalación-del-ambiente-de-desarrollo)
 - [Configuración](#configuración)
 - [Uso](#uso)
 
