@@ -40,8 +40,7 @@ La materia prima también es importante conocer el total que se invierte porque 
      - [Version de Java](#version-de-java)
 - [Instalación](#instalación)
      - [Instalación del ambiente de desarrollo](#instalación-del-ambiente-de-desarrollo)
-     
-     - [Ejecución de pruebas manualmente](#ejecución-de-pruebas-manualmente)
+     - [Ejecución de pruebas manualmente](#ejecución-de-pruebas-manualmente)
      
 - [Configuración](#configuración)
      - [Configuración del producto](#configuración-del-producto)
@@ -50,10 +49,10 @@ La materia prima también es importante conocer el total que se invierte porque 
 - [Uso](#uso)
      - [Manual para usuario final](#manual-para-usuario-final)
            - [Pedidos](#pedidos)
-           - [Pagos](#pagos)
+           - [Pagos trabajadores](#pagos-trabajadores)
            - [Materia prima](#materia-prima)
-           - [Préstamos](#préstamos)
-           - [Cuenta](#cuenta)
+           - [Registro de préstamos](#registros-de-préstamos)
+           - [Cuenta total](#cuenta-total)
      - [Sección de referencia para usuario administrador](#sección-de-referencia-para-usuario-administrador)
 - [Roadmap](#roadmap)
      - [Requerimientos a implementar en un futuro](#requerimientos-a-implementar-en-un-futuro)
@@ -121,10 +120,10 @@ El usuario ingresará a la aplicación ubicada en el escritorio de la computador
 La primera pantalla que visualizará será el menú principal con las opciones:
 
 - Pedidos
-- Pagos
+- Pagos trabajadores
 - Materia prima
-- Préstamos
-- Cuenta
+- Registro de préstamos
+- Cuenta total
 
 
 ### Pedidos
@@ -189,7 +188,7 @@ En la pantalla se tendrá una tabla donde se ingresará la información:
 El usuario tendrá que ingresar valores en cada columna para poder realizar el registro en la base de datos de forma exitosa, cuando se termine de llenar las columnas de la tabla se dará clic en el botón Guardar que se encuentra localizado en la parte inferior derecha, se mostrará un mensaje de confirmación para ingresar la información de la factura en la base de datos.
 
 
-### Cuenta Total
+### Cuenta total
 
 En el menú principal se seleccionará la pestaña Cuenta donde se mostrará el botón Modificar, al dar clic en dicho botón el usuario ingresará en la pantalla principal Cuenta Total.
 
