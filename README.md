@@ -1,10 +1,5 @@
-:toc: macro
-:toc-title:
-:toclevels: 99
 
 # Textiles Jiménez
-
-toc::[]
 
 ## Descripción
 
@@ -39,7 +34,9 @@ La materia prima también es importante conocer el total que se invierte porque 
 
 
 ## Tabla de contenidos
+- [Requerimientos](#Requerimientos)
 
+<!-- toc -->
 
 ## Requerimientos
 
