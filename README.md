@@ -34,15 +34,16 @@ La materia prima también es importante conocer el total que se invierte porque 
 
 
 ## Tabla de contenidos
-- [Requerimientos](#Requerimientos)
-  * [Servidores](#Servidores)
-    + [Paquetes](#Paquetes)
+- [Requerimientos](#requerimientos)
+  - [Servidores de aplicacion y base de datos](#servidores-de-aplicacion-y-base-de-datos)
+  - [Paquetes adicionales](#Paquetes-adicionales)
+- [Uso](#uso)
 
 <!-- toc -->
 
 ## Requerimientos
 
-### Servidores de aplicación, base de datos
+### Servidores de aplicacion, base de datos
 
 - Servidor de aplicación. MAMP versión 4
 - Base de datos. MySQL con PHP
