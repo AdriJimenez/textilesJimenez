@@ -40,9 +40,12 @@ La materia prima también es importante conocer el total que se invierte porque 
      - [Version de Java](#version-de-java)
 - [Instalación](#instalación)
      - [Instalación del ambiente de desarrollo](#instalación-del-ambiente-de-desarrollo)
+     
      - [Ejecución de pruebas manualmente](#ejecución-de-pruebas-manualmente)
+     
 - [Configuración](#configuración)
      - [Configuración del producto](#configuración-del-producto)
+     
      - [Configuración de los requerimientos](#configuración-de-los-requerimientos)
 - [Uso](#uso)
      - [Manual para usuario final](#manual-para-usuario-final)
@@ -52,7 +55,7 @@ La materia prima también es importante conocer el total que se invierte porque 
            - [Préstamos](#préstamos)
            - [Cuenta](#cuenta)
      - [Sección de referencia para usuario administrador](#sección-de-referencia-para-usuario-administrador)
-- [Roadmap]
+- [Roadmap](#roadmap)
      - [Requerimientos a implementar en un futuro](#requerimientos-a-implementar-en-un-futuro)
 
 <!-- toc -->
