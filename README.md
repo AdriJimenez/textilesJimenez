@@ -108,7 +108,8 @@ La primera pantalla que visualizará será el menú principal con las opciones:
 - Préstamos
 - Cuenta
 
-#### Pedidos
+
+### Pedidos
 
 En la opción Pedidos se tendrá el botón Modificar, al dar clic en el botón el usuario ingresará a la pantalla principal Pedidos y Bordado.
 
@@ -126,7 +127,8 @@ De la misma manera que en Pedidos, el usuario ingresará el nuevo estatus del mo
 - Modificar la fecha de entrega
 - Cambiar el estatus a Entregado
 
-#### Pagos trabajadores
+
+### Pagos trabajadores
 
 En el menú principal, en la opción Pagos se tendrá el botón Modificar, al dar clic en el botón el usuario ingresará a la pantalla principal Pagos Trabajadores.
 
@@ -138,7 +140,8 @@ En la pantalla Pagos Trabajadores se controlará la información con referencia 
 
 El usuario tendrá que ingresar valores correctos en cada columna de la tabla, cuando termine de llenar la fila se dará doble clic sobre la fila y a continuación en el botón Guardar que se encuentra ubicado en la parte inferior derecha, se mostrará un mensaje solicitando la confirmación del ingreso de datos, al dar clic en Si se realizará la actualización en la base de datos por el contrario al dar clic en No regresará a la misma pantalla.
 
-#### Registro de préstamos
+
+### Registro de préstamos
 
 En el menú principal se seleccionará la pestaña Préstamos donde se mostrará el botón Modificar, al dar clic en el botón el usuario ingresará a la pantalla principal Registro de préstamos.
 
@@ -151,7 +154,8 @@ En dicha pantalla se contará con una tabla donde se ingresarán los datos neces
 
 El usuario tendrá que ingresar los valores solicitados en cada columna para poder realizar el registro de forma exitosa, cuando se termine de llenar los dos campos se dará clic en el botón Guardar que se encuentra localizado en la parte inferior derecha, se mostrará un mensaje de confirmación para poder ingresar los valores a la base de datos y tener un registro exitoso.
 
-#### Materia prima
+
+### Materia prima
 
 En el menú principal se seleccionará la pestaña Materia prima donde se mostrará el botón Modificar, al dar clic en dicho botón el usuario ingresará en la pantalla principal Materia prima.
 
@@ -166,7 +170,8 @@ En la pantalla se tendrá una tabla donde se ingresará la información:
 
 El usuario tendrá que ingresar valores en cada columna para poder realizar el registro en la base de datos de forma exitosa, cuando se termine de llenar las columnas de la tabla se dará clic en el botón Guardar que se encuentra localizado en la parte inferior derecha, se mostrará un mensaje de confirmación para ingresar la información de la factura en la base de datos.
 
-#### Cuenta Total
+
+### Cuenta Total
 
 En el menú principal se seleccionará la pestaña Cuenta donde se mostrará el botón Modificar, al dar clic en dicho botón el usuario ingresará en la pantalla principal Cuenta Total.
 
