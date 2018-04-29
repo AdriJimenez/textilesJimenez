@@ -10,9 +10,9 @@
 
  La empresa no cuenta con un control sobre la producción, hablando exclusivamente de entregas y también de las prendas que el diseño conlleva bordado o estampado, además se desconocen los gastos que se generan en todos los departamentos, por ejemplo:
 
-  *Materia prima
+- Materia prima
 
-  *Pago a trabajadores
+- Pago a trabajadores
 
 El problema principal es realizar el cálculo cuando se termina la temporada se tiene que realizar la cuenta y no se tienen los valores correctos para que la empresa conozca cuánto fue el total de su inversión en materia prima, la cantidad exacta en el pago a los trabajadores y también el total de la ganancia para la empresa.
 
@@ -25,3 +25,12 @@ Con este sistema se pretende ayudar a tener un mejor control sobre dichas áreas
 También ayudará a conocer con exactitud las fechas de entrega de los pedidos y las fechas de envío para los pedidos que el diseño conlleve un bordado o estampado, con este control se pretende evitar retrasos en la entrega a las tiendas departamentales.
 Otro punto importante, es el control de los pagos a trabajadores, de esta manera se conocerá la cantidad exacta que ganan porque se controlará por los nombres de cada uno.
 La materia prima también es importante conocer el total que se invierte porque el precio por kilo no se mantiene toda la temporada, cada cierto tiempo se incrementa el precio por varias razones, dado que si no se conoce este dato con certeza se pueden tener pérdidas al final de la temporada.
+
+
+## Arquitectura
+
+
+
+
+
+
